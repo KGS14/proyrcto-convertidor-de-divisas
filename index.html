@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Monedas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>💱 Conversor de Monedas</h1>
+    <p>Autor: Tu Nombre - Convierte fácilmente entre 20 divisas internacionales</p>
+  </header>
+
+  <main>
+    <section class="converter-card">
+      <label for="amount">Monto:</label>
+      <input type="number" id="amount" placeholder="Ingresa el monto" min="0" />
+
+      <div class="selectors">
+        <div>
+          <label for="from">De:</label>
+          <select id="from"></select>
+        </div>
+        <div>
+          <label for="to">A:</label>
+          <select id="to"></select>
+        </div>
+      </div>
+
+      <button id="convertBtn">Convertir</button>
+
+      <div id="result" class="result"></div>
+      <div id="conversionTime" class="time"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contacto: tunombre@email.com</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
