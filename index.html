@@ -1,44 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conversor de Monedas</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Conversor Económico • Tasas Internas</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>💱 Conversor de Monedas</h1>
-    <p>Autor: Tu Nombre - Convierte fácilmente entre 20 divisas internacionales</p>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div>
+        <h1>Conversor Económico</h1>
+        <p class="subtitle">Tasas internas (offline) • Indicadores básicos • Conversión rápida</p>
+      </div>
+      <div class="header-contacts">
+        <small>Contacto: <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></small>
+        <nav class="socials">
+          <a href="#" aria-label="Twitter">Twitter</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="GitHub">GitHub</a>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section class="converter-card">
-      <label for="amount">Monto:</label>
-      <input type="number" id="amount" placeholder="Ingresa el monto" min="0" />
+  <main class="container main-grid">
+    <!-- Conversor -->
+    <section class="card converter">
+      <h2>Conversor de Monedas</h2>
+      <div class="row">
+        <label for="amount">Monto</label>
+        <input id="amount" type="number" min="0" step="any" placeholder="Ej: 100" />
+      </div>
 
-      <div class="selectors">
+      <div class="row selects">
         <div>
-          <label for="from">De:</label>
+          <label for="from">De</label>
           <select id="from"></select>
         </div>
         <div>
-          <label for="to">A:</label>
+          <label for="to">A</label>
           <select id="to"></select>
         </div>
       </div>
 
-      <button id="convertBtn">Convertir</button>
+      <div class="row actions">
+        <button id="convertBtn">Convertir</button>
+        <button id="swapBtn" title="Intercambiar monedas">🔁</button>
+      </div>
 
-      <div id="result" class="result"></div>
-      <div id="conversionTime" class="time"></div>
+      <div id="result" class="result">Introduce monto y pulsa Convertir</div>
+      <div id="conversionTime" class="meta"></div>
+    </section>
+
+    <!-- Tasas principales -->
+    <aside class="card rates">
+      <h3>Tasas (base USD)</h3>
+      <div id="topRates" class="rates-list">Cargando tasas internas...</div>
+
+      <h3 style="margin-top:1rem">Indicadores (mock)</h3>
+      <div id="economicIndicators" class="indicators-list">
+        <div>Inflación (ejemplo): 6.2% anual</div>
+        <div>Tasa de política (ejemplo): 13.25%</div>
+        <div>Última actualización: —</div>
+      </div>
+    </aside>
+
+    <!-- Información adicional -->
+    <section class="card info">
+      <h3>Sobre este conversor</h3>
+      <p>
+        Este conversor usa una base de datos interna de tasas (USD = 1). Si deseas
+        tasas en tiempo real se puede integrar cualquier API (ExchangeRate.host,
+        CurrencyFreaks, etc.). Las tasas internas pueden actualizarse manualmente
+        en <code>script.js</code>.
+      </p>
+      <p class="small">Nota: Las tasas internas son orientativas y pueden no coincidir con cotizaciones oficiales o de mercado.</p>
+      <button id="downloadRatesBtn" class="small-btn">Exportar tasas (JSON)</button>
     </section>
   </main>
 
-  <footer>
-    <p>Contacto: tunombre@email.com</p>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Conversor Económico</strong>
+        <p>Autor: Tu Nombre • Correo: <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></p>
+      </div>
+      <div>
+        <p>Soporte y redes</p>
+        <p><a href="#">Twitter</a> · <a href="#">LinkedIn</a> · <a href="#">GitHub</a></p>
+      </div>
+      <div>
+        <p>Licencia: MIT</p>
+        <p class="small">Última actualización local de tasas: <span id="footerUpdated">—</span></p>
+      </div>
+    </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
