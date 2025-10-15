@@ -1,6 +1,4 @@
 # proyrcto-convertidor-de-divisas
-
-# proyrcto-convertidor-de-divisas
                                              Conversor Económico — Tasas Internas y Diseño Moderno
 
 Este proyecto es una aplicación web para convertir divisas de forma rápida, visual y sin depender de internet.
@@ -59,5 +57,6 @@ GitHub
                                                             Licencia
 
 Este proyecto se distribuye bajo la licencia MIT, lo que significa que puedes usarlo, modificarlo y compartirlo libremente, siempre y cuando mantengas los créditos originales.
+
 
 ¿Quieres que lo adapte para que el README incluya una vista previa con imagen del sitio (por ejemplo, una captura o mockup generada automáticamente)? Puedo agregarte esa sección con el formato correcto para GitHub.
